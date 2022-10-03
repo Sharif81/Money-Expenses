@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Money Expenses</title>
+
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="card">
+                <div class="card-header">
+                    <h2 class="text-center"><i class="fas fa-comment-dollar text-danger fa-lg"></i>&nbsp;<b>Money <span
+                                class="text-danger">Expenses</span></b></h2>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <div class="card">
+                <div class="card-body">
+                    <div class="row d-flex justify-content-between">
+                        <div class="col-md-7 text-center">
+                            <div class="half-width">
+                                <img src="images/Money-Expenses1.jpg" class="img-fluid rounded w-75" alt="">
+                            </div>
+                        </div>
+
+                        <div class="col-md-5 bg-dark text-light" >
+                            <div class="half-width p-2">
+                                <form>
+                                    <h5 class="mb-3 mt-5 text-center"><b>Income</b></h5>
+                                    <div class="form-group row">
+                                        <label for="income" class="col-sm-3 form-label"><b>Income:</b></label>
+                                        <div class="col-sm-7">
+                                            <input type="text" class="form-control form-control-sm" id="income"
+                                                placeholder="Type Income Amount">
+                                        </div>
+                                    </div>
+                                </form>
+
+                                <form>
+                                    <h5 class="text-center mb-3 mt-3"><b>Expenses</b></h5>
+                                    <div class="form-group row">
+                                        <label for="food" class="col-sm-3 form-label"><b>Food:</b></label>
+                                        <div class="col-sm-7">
+                                            <input type="text" class="form-control form-control-sm" id="food"
+                                                placeholder="Type Food Amount">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group row mt-2">
+                                        <label for="rent" class="col-sm-3 form-label"><b>Rent:</b></label>
+                                        <div class="col-sm-7">
+                                            <input type="text" class="form-control form-control-sm" id="rent"
+                                                placeholder="Type Rent Amount">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group row mt-2">
+                                        <label for="clothes" class="col-sm-3 form-label"><b>Clothes:</b></label>
+                                        <div class="col-sm-7">
+                                            <input type="text" class="form-control form-control-sm" id="clothes"
+                                                placeholder="Type Clothes Amount">
+                                        </div>
+                                    </div>
+                                </form>
+
+                                <div class="text-center">
+                                    <button type="button" id="btn-calculate"
+                                        class="btn btn-danger col-sm-4 mt-3">Calculate</button>
+                                </div>
+                            </div>
+
+                            <div class="row mt-5 text-center">
+                                <h5><b>Total Income:</b>&nbsp; <span id="total-income"></span></h5>
+                                <h5><b>Total Expenses:</b>&nbsp; <span id="expenses"></span></h5>
+                                <h5><b>Balance:</b>&nbsp; <span id="balance"></span></h5>
+                            </div>
+
+                            <div class="row mt-4">
+                                <label for="saving" class="col-sm-3 col-form-label"><b>Saving:</b></label>
+                                <div class="col-sm-4">
+                                    <input type="text" class="form-control form-control" id="saving"
+                                        placeholder="Saving %">
+                                </div>
+                                <label for="percent" class="col-sm-1 col-form-label"><b>%</b></label>
+                                <button type="button" class="btn btn-danger col-sm-3 col-form-label" id="btn-save">Save</button>
+                            </div>
+
+                            <div class="row mt-5 text-center">
+                                <h5><b>Saving Amount:</b>&nbsp; <span id="saving-amount"></span></h5>
+                                <h5><b>Remaining Balance:</b>&nbsp; <span id="remaining-balance"></span></h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
